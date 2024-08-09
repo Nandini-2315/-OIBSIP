@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- Input field for user to enter the value -->
+    <EditText
+        android:id="@+id/inputValue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter value"
+        android:inputType="numberDecimal"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Dropdown for selecting the conversion type (Length, Weight, etc.) -->
+    <Spinner
+        android:id="@+id/conversionTypeSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/inputValue"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Dropdown for selecting the 'From' unit -->
+    <Spinner
+        android:id="@+id/fromUnitSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/conversionTypeSpinner"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Dropdown for selecting the 'To' unit -->
+    <Spinner
+        android:id="@+id/toUnitSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/fromUnitSpinner"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Button to trigger the conversion -->
+    <Button
+        android:id="@+id/convertButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Convert"
+        android:layout_below="@id/toUnitSpinner"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- TextView to display the result -->
+    <TextView
+        android:id="@+id/resultTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Result: "
+        android:textSize="18sp"
+        android:layout_below="@id/convertButton"
+        android:layout_marginTop="16dp"/>
+</RelativeLayout>
